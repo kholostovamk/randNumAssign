@@ -14,6 +14,7 @@ format your output nicely so that everything lines up properly. Comment your cod
 */
 
 #include <iostream>
+#include <iomanip> // for width 
 #include <cstdlib> // for rand & srand function
 using namespace std;
 
@@ -28,9 +29,10 @@ srand(seed);
 
 
 int randNum1 = ( rand () % (maxValue - minValue + 1)) + minValue; // found first random number
-cout << randNum1 << endl;
+cout << setw(6) << randNum1 << endl;
 int randNum2 = ( rand () % (randNum1 - minValue + 1)) + minValue; // found second random number
-cout << randNum2 << endl;
+cout<< "-" << setw(5) << randNum2 << endl;
+cout << "------" << endl;
 
 
 }
