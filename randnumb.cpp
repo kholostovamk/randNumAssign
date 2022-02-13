@@ -19,11 +19,18 @@ using namespace std;
 
 int main () {
 
-//constants
-const int minValue = 1;
+const int minValue = 1; 
 int maxValue = 300;
-int randNum1 = ( rand () % (maxValue - minValue + 1)) + minValue;
+
+unsigned seed = time (0);
+
+srand(seed);
+
+
+int randNum1 = ( rand () % (maxValue - minValue + 1)) + minValue; // found first random number
 cout << randNum1 << endl;
+int randNum2 = ( rand () % (randNum1 - minValue + 1)) + minValue; // found second random number
+cout << randNum2 << endl;
 
 
 }
