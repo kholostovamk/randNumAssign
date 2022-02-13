@@ -22,6 +22,8 @@ int main () {
 
 const int minValue = 1; 
 int maxValue = 300;
+int answer;
+int goodAnswer;
 
 unsigned seed = time (0);
 
@@ -31,8 +33,16 @@ srand(seed);
 int randNum1 = ( rand () % (maxValue - minValue + 1)) + minValue; // found first random number
 cout << setw(6) << randNum1 << endl;
 int randNum2 = ( rand () % (randNum1 - minValue + 1)) + minValue; // found second random number
+
+
 cout<< "-" << setw(5) << randNum2 << endl;
 cout << "------" << endl;
+cout << "Please enter the answer to the problem" << endl;
+cin >> answer;
+cout << "Your answer is " << answer << endl;
+goodAnswer = randNum1 - randNum2;
+cout << "The right answer is " << goodAnswer << endl;
+
 
 
 }
