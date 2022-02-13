@@ -17,9 +17,15 @@ format your output nicely so that everything lines up properly. Comment your cod
 #include <cstdlib> // for rand & srand function
 using namespace std;
 
-int main {
+int main () {
 
-    
+//constants
+const int minValue = 1;
+int maxValue = 300;
+int randNum1 = ( rand () % (maxValue - minValue + 1)) + minValue;
+cout << randNum1 << endl;
+
+
 }
 
 
